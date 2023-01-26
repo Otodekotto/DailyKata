@@ -1,29 +1,27 @@
 function charCount(letter, words) {
-    let count = 0;
-    if (letter.length > 1) {
-        console.log("error")
-        return;
+  let count = 0
+  if (letter.length > 1) {
+    console.log("error")
+    return
+  }
+  for (let i = 0; i < words.length; i++) {
+    if (letter === words[i]) {
+      count++
     }
-    for (let i = 0; i < words.length; i++) {
-        if (letter === words[i]) {
-            count++
-        }
-    }
-    console.log(count)
+  }
+  console.log(count)
 }
 
 function charCountV2(letter, words) {
-    let wordarray = Array.from(words)
-    if (letter.length > 1) {
-        console.log("error")
-        return;
-    }
+  let wordarray = Array.from(words)
+  if (letter.length > 1) {
+    console.log("error")
+    return
+  }
 
-    const count = wordarray.filter(words => words === letter);
-    console.log(count.length)
+  const count = wordarray.filter((words) => words === letter)
+  console.log(count.length)
 }
-
-
 
 charCountV2("a", "edabit")
 charCountV2("c", "Cha,ber of secrets")
